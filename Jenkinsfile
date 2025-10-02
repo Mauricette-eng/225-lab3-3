@@ -60,7 +60,7 @@ pipeline {
                 script {
                     sh "kubectl get pods"
                     sh "kubectl get services"
-                    sh "kubectl get deploy"
+                    sh "kubectl get deploy -l app=nginx -o wide"
                 }
             }
         }
